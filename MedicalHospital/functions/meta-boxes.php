@@ -25,40 +25,40 @@ function custom_meta_boxes() {
     'pages'       => array( 'page' ),
     'context'     => 'normal',
     'priority'    => 'high',
-        'fields'      => array(
+    'fields'      => array(
       array(
         'label'       => __( 'Банер на главной', 'theme-text-domain' ),
         'id'          => 'baner_on_mainpage',
         'type'        => 'tab',
-         'desc'        => 'Эти настройки относятся только к произвольному заполнению контентом главной страницы сайта.',
+        'desc'        => 'Эти настройки относятся только к произвольному заполнению контентом главной страницы сайта.',
       ),
       array(
-         'id'          => 'banerfon_upload',
-        'label'        => 'Загрузить изображения для фона',
-        'desc'        => 'Загрузить картинку размером 1920px x 640px',
-        'type'        => 'upload',
-      ),
+       'id'          => 'banerfon_upload',
+       'label'        => 'Загрузить изображения для фона',
+       'desc'        => 'Загрузить картинку размером 1920px x 640px',
+       'type'        => 'upload',
+     ),
       array(
         'label'       => 'УТП на первом экране сайта',
         'id'          => 'title_baner',
         'type'        => 'text',
         'desc'        => '',
-         'desc'        => 'Введите текст уникального торгового предложения, который будет размещаться на фонере банера (большого изображения) и оформлено тегом h1 ',
-        ),
+        'desc'        => 'Введите текст уникального торгового предложения, который будет размещаться на фонере банера (большого изображения) и оформлено тегом h1 ',
+      ),
       array(
         'label'       => 'Описание под УТП',
         'id'          => 'desct_baner',
         'type'        => 'text',
         'desc'        => 'Введите текст описания, которое будет размещаться на фонере банера (большого изображения) под УТП',
-        ),
-array(
+      ),
+      array(
         'label'       => 'Ссылка на страницу',
         'id'          => 'link',
         'type'        => 'text',
-        'desc'        => '',
-        ),
+        'desc'        => 'Изменить текст надписи на кнопке, выбрав из выпадающего списка название нужной страницы',
+      ),
 
-     array(
+      array(
         'id'          => 'link_pageselect',
         'label'       => 'Выберите страницу',
         'desc'        => '',
@@ -72,8 +72,8 @@ array(
         'type'        => 'tab'
       ),
 
-/*первый блок */
-        array(
+      /*первый блок */
+      array(
         'id'          => 'first_dovod_icon_on_off',
         'label'       => 'Настроить первый блок',
         'desc'        => 'Изменить название, описание, загрузить иконки для первого блока Доводы обратиться к нам',
@@ -84,7 +84,7 @@ array(
        'id'          => 'first_dovod_icon',
        'label'        => 'Загрузить изображение',
        'desc'        => 'Загрузить картинку для первого блока Доводы обратиться к нам, размером  51px x 54px.',
-      'type'        => 'upload',
+       'type'        => 'upload',
        'condition'   => 'first_dovod_icon_on_off:is(on)'
      ),
       array(
@@ -92,7 +92,7 @@ array(
         'id'          => 'first_dovod_title',
         'type'        => 'text',
         'desc'        => 'Введите название первого блока Доводы обратиться к нам',
-            'condition'   => 'first_dovod_icon_on_off:is(on)'
+        'condition'   => 'first_dovod_icon_on_off:is(on)'
       ),
       array(
         'label'       => 'краткое описание причины',
@@ -100,11 +100,11 @@ array(
         'type'        => 'textarea',
         'rows'        => '3',
         'desc'        => 'Введите текст для первого блока Доводы обратиться к нам',
-            'condition'   => 'first_dovod_icon_on_off:is(on)'
+        'condition'   => 'first_dovod_icon_on_off:is(on)'
       ),
 
-/* второй блок */
-  array(
+      /* второй блок */
+      array(
         'id'          => 'second_dovod_icon_on_off',
         'label'       => 'Настроить второй блок',
         'desc'        => 'Изменить название, описание, загрузить иконки для второго блока Доводы обратиться к нам',
@@ -131,11 +131,11 @@ array(
         'type'        => 'textarea',
         'rows'        => '3',
         'desc'        => 'Введите текст для второго блока причин обратиться к нам',
-         'condition'   => 'second_dovod_icon_on_off:is(on)'
+        'condition'   => 'second_dovod_icon_on_off:is(on)'
       ),
 
-/* третий блок */
-  array(
+      /* третий блок */
+      array(
         'id'          => 'therd_dovod_icon_on_off',
         'label'       => 'Настроить третий блок',
         'desc'        => 'Изменить название, описание, загрузить иконки для третьего блока Доводы обратиться к нам',
@@ -162,11 +162,11 @@ array(
         'type'        => 'textarea',
         'rows'        => '3',
         'desc'        => 'Введите текст для третьего блока причин обратиться к нам',
-         'condition'   => 'therd_dovod_icon_on_off:is(on)'
+        'condition'   => 'therd_dovod_icon_on_off:is(on)'
       ),
 
-/* четвертый блок */
-  array(
+      /* четвертый блок */
+      array(
         'id'          => 'foure_dovod_icon_on_off',
         'label'       => 'Настроить четвертый блок',
         'desc'        => 'Изменить название, описание, загрузить иконки для четвертого блока Доводы обратиться к нам',
@@ -193,34 +193,34 @@ array(
         'type'        => 'textarea',
         'rows'        => '3',
         'desc'        => 'Введите текст для четвертого блока причин обратиться к нам',
-         'condition'   => 'foure_dovod_icon_on_off:is(on)'
+        'condition'   => 'foure_dovod_icon_on_off:is(on)'
       ),
-   array(
+      array(
         'label'       => 'Почему мы', 'theme-text-domain',
         'id'          => 'why_we_tab',
         'type'        => 'tab'
       ),
-  array(
+      array(
         'label'       => 'Заголовок блока', 'theme-text-domain',
         'id'          => 'why_me_title',
         'type'        => 'text',
         'desc'        => 'Введите название(Title) блока почему мы'
       ),
- array(
+      array(
         'label'       => 'Описание блока', 'theme-text-domain',
         'id'          => 'why_me_descrip',
         'type'        => 'text',
         'desc'        => 'Введите описание(Description) блока почему мы'
       ),
-   array(
+      array(
        'id'          => 'center_whyme_icon',
        'label'        => 'Загрузить изображение',
        'desc'        => 'Загрузить картинку, которое будет отображаться по центру в блоке Почему мы, размером 337px x 598px.',
        'type'        => 'upload',
-      ),
+     ),
 
-/* первый блок почему мы */
-  array(
+      /* первый блок почему мы */
+      array(
         'id'          => 'one_whyme_icon_on_off',
         'label'       => 'Настроить первый блок',
         'desc'        => 'Изменить название, описание, загрузить иконки для первого блока Почему мы',
@@ -247,12 +247,11 @@ array(
         'type'        => 'textarea',
         'rows'        => '3',
         'desc'        => 'Введите текст для первого блока Почему мы',
-         'condition'   => 'one_whyme_icon_on_off:is(on)'
+        'condition'   => 'one_whyme_icon_on_off:is(on)'
       ),
 
-
-/* второй блок блок почему мы */
-  array(
+      /* второй блок блок почему мы */
+      array(
         'id'          => 'two_whyme_icon_on_off',
         'label'       => 'Настроить второй блок',
         'desc'        => 'Изменить название, описание, загрузить иконки для второго блока Почему мы',
@@ -279,11 +278,11 @@ array(
         'type'        => 'textarea',
         'rows'        => '3',
         'desc'        => 'Введите текст для второго блока причины Почему мы',
-         'condition'   => 'two_whyme_icon_on_off:is(on)'
+        'condition'   => 'two_whyme_icon_on_off:is(on)'
       ),
 
-/* третий блок блок почему мы */
-  array(
+      /* третий блок блок почему мы */
+      array(
         'id'          => 'tree_whyme_icon_on_off',
         'label'       => 'Настроить третий блок',
         'desc'        => 'Изменить название, описание, загрузить иконки для третьего блока Почему мы',
@@ -313,8 +312,8 @@ array(
         'condition'   => 'tree_whyme_icon_on_off:is(on)'
       ),
 
-/* четвертый блок блок почему мы */
-  array(
+      /* четвертый блок блок почему мы */
+      array(
         'id'          => 'foure_whyme_icon_on_off',
         'label'       => 'Настроить четвертый блок',
         'desc'        => 'Изменить название, описание, загрузить иконки для четвертого блока Почему мы',
@@ -343,16 +342,20 @@ array(
         'desc'        => 'Введите текст для четвертого блока причины Почему мы',
         'condition'   => 'foure_whyme_icon_on_off:is(on)'
       ),
-
-
-  array(
+      array(
         'label'       => 'Анимационные цифры',
         'id'          => 'anim_numder_tab',
         'type'        => 'tab'
       ),
+      array(
+       'id'          => 'animfon_upload',
+       'label'        => 'Загрузить изображения для фона',
+       'desc'        => 'Загрузить картинку размером 1920px x 521px',
+       'type'        => 'upload',
+     ),
 
-/* первый блок внимированный блок почему мы */
-  array(
+      /* первый блок внимированный блок почему мы */
+      array(
         'id'          => 'one_animationblock_on_off',
         'label'       => 'Настроить первый блок c аним.числом ',
         'desc'        => 'Изменить название, описание, загрузить иконки для первого блока Анимационного блока',
@@ -381,8 +384,8 @@ array(
         'condition'   => 'one_animationblock_on_off:is(on)'
       ),
 
-/* второй блок внимированный блок почему мы */
-  array(
+      /* второй блок внимированный блок почему мы */
+      array(
         'id'          => 'two_animationblock_on_off',
         'label'       => 'Настроить второй блок c аним.числом ',
         'desc'        => 'Изменить название, описание, загрузить иконки для второго блока Анимационного блока',
@@ -410,8 +413,9 @@ array(
         'desc'        => 'Введите краткое описание анимационного числа, которое будет размещено во второй слева колонке',
         'condition'   => 'two_animationblock_on_off:is(on)'
       ),
-/* третий блок внимированный блок почему мы */
-  array(
+
+      /* третий блок внимированный блок почему мы */
+      array(
         'id'          => 'three_animationblock_on_off',
         'label'       => 'Настроить третий блок c аним.числом ',
         'desc'        => 'Изменить название, описание, загрузить иконки для третьего блока Анимационного блока',
@@ -439,8 +443,9 @@ array(
         'desc'        => 'Введите краткое описание анимационного числа, которое будет размещено в трерьей слева колонке',
         'condition'   => 'three_animationblock_on_off:is(on)'
       ),
-/* Четвертый блок внимированный блок почему мы */
-  array(
+
+      /* Четвертый блок внимированный блок почему мы */
+      array(
         'id'          => 'foure_animationblock_on_off',
         'label'       => 'Настроить четвертый блок c аним.числом ',
         'desc'        => 'Изменить название, описание, загрузить иконки для четвертого блока Анимационного блока',
@@ -468,90 +473,683 @@ array(
         'desc'        => 'Введите краткое описание анимационного числа, которое будет размещено в четвертой слева колонке',
         'condition'   => 'foure_animationblock_on_off:is(on)'
       ),
-
-
-
-
-
-
-
-
-
-
-// стартую здесь
-
-array(
+      array(
         'label'       => 'Как мы работаем',
-        'id'          => 'whow_work_tab',
+        'id'          => 'how_wework_tab',
         'type'        => 'tab'
       ),
-  array(
-        'label'       => 'Text', 'theme-text-domain',
-        'id'          => 'demo_text',
+      array(
+        'label'       => 'Название блока', 'theme-text-domain',
+        'id'          => 'how_wework_title',
         'type'        => 'text',
-        'desc'        => 'This is a demo Text field.'
+        'desc'        => 'Введите название блока Как мы работаем'
       ),
 
+      array(
+        'label'       => 'Описание блока', 'theme-text-domain',
+        'id'          => 'how_wework_descr',
+        'type'        => 'text',
+        'desc'        => 'Введите описание(Description) блока блока Как мы работаем'
+      ),
 
-
-
-
-
-
-
-
-
-array(
+      array(
         'label'       => 'Креативность',
         'id'          => 'creativ_block',
         'type'        => 'tab'
       ),
-  array(
-        'label'       => 'Text', 'theme-text-domain',
-        'id'          => 'demo_text',
+      array(
+        'label'       => 'Название блока', 'theme-text-domain',
+        'id'          => 'creativ_block_title',
         'type'        => 'text',
-        'desc'        => 'This is a demo Text field.'
+        'desc'        => 'Введите название блока Как мы работаем'
       ),
 
+      array(
+        'label'       => 'Описание блока', 'theme-text-domain',
+        'id'          => 'creativ_block_descr',
+        'type'        => 'text',
+        'desc'        => 'Введите описание(Description) блока блока Как мы работаем'
+      ),
 
+      /* первый блок аккардиона креативность */
+      array(
+        'id'          => 'one_creativityblock_on_off',
+        'label'       => 'Настроить первый блок аккардиона',
+        'desc'        => 'Настроить название и наполнение первого блока аккардиона Креативность',
+        'std'         => 'off',
+        'type'        => 'on-off',
+      ),
+      array(
+       'id'          => 'one_creativityblock_title',
+       'label'        => 'Название блока',
+       'desc'        => 'Введите название первого блока аккардиона Креативность',
+       'type'        => 'text',
+       'condition'   => 'one_creativityblock_on_off:is(on)'
+     ),
+      array(
+        'label'       => 'Краткое описание числа',
+        'id'          => 'one_creativityblock_descr',
+        'type'        => 'text',
+        'desc'        => 'Введите текстовое наполнение первого блока аккардиона Креативность',
+        'condition'   => 'one_creativityblock_on_off:is(on)'
+      ),
+ array(
+        'id'          => 'one_creativityblock_link',
+        'label'       => 'Выберите страницу',
+        'desc'        => '',
+        'type'        => 'page-select',
+        'desc'        => 'Выберите название страницы, чтобы привязать кнопку к странице на сайте',
+          'condition'   => 'one_creativityblock_on_off:is(on)'
+      ),
 
-array(
+      /* второй блок аккардиона креативность */
+      array(
+        'id'          => 'two_creativityblock_on_off',
+        'label'       => 'Настроить второго блок аккардиона',
+        'desc'        => 'Настроить название и наполнение второго блока аккардиона Креативность',
+        'std'         => 'off',
+        'type'        => 'on-off',
+      ),
+      array(
+       'id'          => 'two_creativityblock_title',
+       'label'        => 'Название блока',
+       'desc'        => 'Введите название второго блока аккардиона Креативность',
+       'type'        => 'text',
+       'condition'   => 'two_creativityblock_on_off:is(on)'
+     ),
+      array(
+        'label'       => 'Краткое описание числа',
+        'id'          => 'two_creativityblock_descr',
+        'type'        => 'text',
+        'desc'        => 'Введите текстовое наполнение второго блока аккардиона Креативность',
+        'condition'   => 'two_creativityblock_on_off:is(on)'
+      ),
+      array(
+        'id'          => 'two_creativityblock_link',
+        'label'       => 'Выберите страницу',
+        'desc'        => '',
+        'type'        => 'page-select',
+        'desc'        => 'Выберите название страницы, чтобы привязать кнопку к странице на сайте',
+         'condition'   => 'two_creativityblock_on_off:is(on)'
+      ),
+
+      /* третий блок аккардиона креативность */
+      array(
+        'id'          => 'three_creativityblock_on_off',
+        'label'       => 'Настроить третьего блока аккардиона',
+        'desc'        => 'Настроить название и наполнение третьего блока аккардиона Креативность',
+        'std'         => 'off',
+        'type'        => 'on-off',
+      ),
+      array(
+       'id'          => 'three_creativityblock_title',
+       'label'        => 'Название блока',
+       'desc'        => 'Введите название третьего блока аккардиона Креативность',
+       'type'        => 'text',
+       'condition'   => 'three_creativityblock_on_off:is(on)'
+     ),
+      array(
+        'label'       => 'Краткое описание числа',
+        'id'          => 'three_creativityblock_descr',
+        'type'        => 'text',
+        'desc'        => 'Введите текстовое наполнение третьего блока аккардиона Креативность',
+        'condition'   => 'three_creativityblock_on_off:is(on)'
+      ),
+      array(
+        'id'          => 'tree_creativityblock_link',
+        'label'       => 'Выберите страницу',
+        'desc'        => '',
+        'type'        => 'page-select',
+        'desc'        => 'Выберите название страницы, чтобы привязать кнопку к странице на сайте',
+         'condition'   => 'three_creativityblock_on_off:is(on)'
+      ),
+
+// блок портфолио
+      array(
         'label'       => 'Портфолио',
         'id'          => 'portfolio_block',
         'type'        => 'tab'
       ),
-  array(
-        'label'       => 'Text', 'theme-text-domain',
-        'id'          => 'demo_text',
+      array(
+        'label'       => 'Название блока', 'theme-text-domain',
+        'id'          => 'portfolio_block_title',
         'type'        => 'text',
-        'desc'        => 'This is a demo Text field.'
+        'desc'        => 'Введите название блока Портфолио'
       ),
 
+      array(
+        'label'       => 'Описание блока', 'theme-text-domain',
+        'id'          => 'portfolio_blockdescr',
+        'type'        => 'text',
+        'desc'        => 'Введите описание(Description) блока блока Портфолио'
+      ),
+
+      array(
+       'id'          => 'portfoliofon_upload',
+       'label'        => 'Загрузить изображения для фона',
+       'desc'        => 'Загрузить картинку размером 1920px x 640px',
+       'type'        => 'upload',
+     ),
+
+// здесь делаю портфолио
+
+ array(
+        'label'       => 'Настройки портфолио',
+        'id'          => 'main_slider_show',
+        'type'        => 'on-off',
+        'desc'        => 'Показать настройки портфолио',
+        'std'         => 'on'
+        ),
+      array(
+        'id'          => 'main_slider_list',
+        'label'       => 'Слайдер',
+        'desc'        => '',
+        'std'         => '',
+        'type'        => 'list-item',
+        'condition'   => 'main_slider_show:is(on)',
+        'settings'    => array(
+          array(
+            'id'          => 'main_slider_list_header',
+            'label'       => 'Напишите заголовок',
+            'desc'        => '',
+            'type'        => 'text',
+            ),
+          array(
+            'id'          => 'main_slider_list_upload',
+            'label'       => 'Загрузите слайд',
+            'desc'        => '',
+            'type'        => 'upload',
+            ),
+          )
+        ),
+
+// здесь конец портфолио
 
 
-array(
+
+
+
+
+
+
+
+
+
+
+// блок наша комманда
+      array(
         'label'       => 'Наша команда',
-        'id'          => 'portfolio_block',
+        'id'          => 'ourcomand_block',
         'type'        => 'tab'
       ),
-  array(
-        'label'       => 'Text', 'theme-text-domain',
-        'id'          => 'demo_text',
+      array(
+        'label'       => 'Название блока', 'theme-text-domain',
+        'id'          => 'ourcomand_title',
         'type'        => 'text',
-        'desc'        => 'This is a demo Text field.'
+        'desc'        => 'Введите название блока Наша команда'
+      ),
+      array(
+        'label'       => 'Описание блока', 'theme-text-domain',
+        'id'          => 'ourcomand_descr',
+        'type'        => 'text',
+        'desc'        => 'Введите описание(Description) блока Наша команда'
+      ),
+    array(
+        'label'       => 'Ссылка на страницу',
+        'id'          => 'ourcommands_link',
+        'type'        => 'text',
+        'desc'        => 'Изменить текст надписи на кнопке, выбрав из выпадающего списка название нужной страницы',
+      ),
+      array(
+        'id'          => 'ourcomands_link_pageselect',
+        'label'       => 'Выберите страницу',
+        'desc'        => '',
+        'type'        => 'page-select',
+        'desc'        => 'Выберите название страницы, чтобы привязать кнопку к странице на сайте',
+      ),
+
+// блок с первым учасником команды
+      array(
+        'id'          => 'one_commandblock_on_off',
+        'label'       => 'Первый участник команды',
+        'desc'        => 'Ввесли информацию по первому участнику Команды',
+        'std'         => 'off',
+        'type'        => 'on-off',
+      ),
+      array(
+       'id'          => 'one_commandblock_picture',
+       'label'        => 'Фотография участника',
+       'desc'        => 'Загрузите фотогрфию первого участника команды, размер 317px X 317px',
+       'type'        => 'upload',
+       'condition'   => 'one_commandblock_on_off:is(on)'
+     ),
+      array(
+        'label'       => 'Имя участника команды',
+        'id'          => 'one_commandblock_name',
+        'type'        => 'text',
+        'desc'        => 'Введите Имя, Фамилию первого участника команды',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Должность участника команды',
+        'id'          => 'one_commandblock_proff',
+        'type'        => 'text',
+        'desc'        => 'Введите занимающую должность, профессию первого участника команды',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+      array(
+        'id'          => 'dell_first_onecommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 1 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'one_socialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br>fab fa-facebook-f - фейсбук, <br>fab fa-facebook-messenger - фейсбук-мессенджер, <br>fab fa-google-plus-g - Google +<br>fab fa-google-plus-square - Google +<br>fab fa-google-plus - Google +<br> fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br>fab fa-instagram - Инстаграм<br>fab fa-youtube-square - YouTube<br>fab fa-youtube - YouTube<br>fab fa-twitter - Твитер<br>fab fa-twitter-square - Твитер<br>fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br>fab fa-tumblr - Тumblr<br> fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br>fab fa-discord - Discord<br>fab fa-viber - Viber<br>fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br>fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br>fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br>
+        ',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'one_socialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта сициальной сети',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+      array(
+        'id'          => 'dell_second_onecommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 1 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'one_twosocialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br>fab fa-facebook-f - фейсбук, <br>fab fa-facebook-messenger - фейсбук-мессенджер, <br>fab fa-google-plus-g - Google +<br>fab fa-google-plus-square - Google +<br>fab fa-google-plus - Google +<br>fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br>fab fa-instagram - Инстаграм<br>fab fa-youtube-square - YouTube<br>fab fa-youtube - YouTube<br>fab fa-twitter - Твитер<br>fab fa-twitter-square - Твитер<br>fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br>fab fa-whatsapp-square - WhatsApp<br>fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br>fab fa-discord - Discord<br>fab fa-viber - Viber<br> fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br>fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br>fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br>',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'one_twosocialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта социальной сети',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+
+      array(
+        'id'          => 'dell_third_onecommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 1 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'one_threesocialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br>fab fa-facebook-f - фейсбук, <br>fab fa-facebook-messenger - фейсбук-мессенджер,<br>fab fa-google-plus-g - Google +<br>fab fa-google-plus-square - Google +<br>fab fa-google-plus - Google +<br>fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br>fab fa-instagram - Инстаграм<br>fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br>fab fa-twitter - Твитер<br>fab fa-twitter-square - Твитер<br>fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br>fab fa-whatsapp-square - WhatsApp<br>fab fa-tumblr - Тumblr<br> fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br> fab fa-discord - Discord<br>fab fa-viber - Viber<br> fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br>fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br> ',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'one_threesocialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта социальной сети',
+        'condition'   => 'one_commandblock_on_off:is(on)'
+      ),
+
+// блок для второго учасником команды
+      array(
+        'id'          => 'two_commandblock_on_off',
+        'label'       => 'Второй участник команды',
+        'desc'        => 'Ввесли информацию по второму участнику Команды',
+        'std'         => 'off',
+        'type'        => 'on-off',
+      ),
+      array(
+       'id'          => 'two_commandblock_picture',
+       'label'        => 'Фотография участника',
+       'desc'        => 'Загрузите фотогрфию второго участника команды, размер 317px X 317px',
+       'type'        => 'upload',
+       'condition'   => 'two_commandblock_on_off:is(on)'
+     ),
+      array(
+        'label'       => 'Имя участника команды',
+        'id'          => 'two_commandblock_name',
+        'type'        => 'text',
+        'desc'        => 'Введите Имя, Фамилию второго участника команды',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Должность участника команды',
+        'id'          => 'two_commandblock_proff',
+        'type'        => 'text',
+        'desc'        => 'Введите занимающую должность, профессию второго участника команды',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+
+      array(
+        'id'          => 'dell_two_onecommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 1 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'two_socialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br> fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br> fab fa-facebook-messenger - фейсбук-мессенджер, <br> fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br> fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br> fab fa-instagram - Инстаграм<br> fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br>fab fa-twitter - Твитер<br>fab fa-twitter-square - Твитер<br>fab fa-odnoklassniki-square - одноклассники<br> fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br>fab fa-whatsapp-square - WhatsApp<br> fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br>fab fa-discord - Discord<br>fab fa-viber - Viber<br> fab fa-linkedin-in - Linkedin<br> fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br> fab fa-telegram-plane - Telegram<br> fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br>fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br>
+        ',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'two_socialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта сициальной сети',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+
+      array(
+        'id'          => 'dell_two00_onecommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 2 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'two_twosocialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br>fab fa-facebook-messenger - фейсбук-мессенджер, <br>fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br> fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br>fab fa-instagram - Инстаграм<br> fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br>fab fa-twitter - Твитер<br>fab fa-twitter-square - Твитер<br>fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br> fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br> fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br>fab fa-discord - Discord<br>fab fa-viber - Viber<br> fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br> fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br> fab fa-snapchat-ghost  - Snapchat<br>
+        ',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'two_twosocialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта социальной сети',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+      array(
+        'id'          => 'dell_two02_onecommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 3 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'two_threesocialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br> fab fa-facebook-messenger - фейсбук-мессенджер, <br> fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br>fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br> fab fa-instagram - Инстаграм<br>fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br> fab fa-twitter - Твитер<br> fab fa-twitter-square - Твитер<br> fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br>fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br> fab fa-discord - Discord<br> fab fa-viber - Viber<br>fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br> ',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'two_threesocialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта социальной сети',
+        'condition'   => 'two_commandblock_on_off:is(on)'
+      ),
+
+// блок для третьего учасником команды
+      array(
+        'id'          => 'tree_commandblock_on_off',
+        'label'       => 'Третий участник команды',
+        'desc'        => 'Ввесли информацию по третьему участнику Команды',
+        'std'         => 'off',
+        'type'        => 'on-off',
+      ),
+      array(
+       'id'          => 'tree_commandblock_picture',
+       'label'        => 'Фотография участника',
+       'desc'        => 'Загрузите фотогрфию третьего участника команды, размер 317px X 317px',
+       'type'        => 'upload',
+       'condition'   => 'tree_commandblock_on_off:is(on)'
+     ),
+      array(
+        'label'       => 'Имя участника команды',
+        'id'          => 'tree_commandblock_name',
+        'type'        => 'text',
+        'desc'        => 'Введите Имя, Фамилию третьего участника команды',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Должность участника команды',
+        'id'          => 'tree_commandblock_proff',
+        'type'        => 'text',
+        'desc'        => 'Введите занимающую должность, профессию третьего участника команды',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
       ),
 
 
+      array(
+        'id'          => 'dell_treee_onecommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 1 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'tree_socialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br> fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br> fab fa-facebook-messenger - фейсбук-мессенджер, <br> fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br> fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br> fab fa-instagram - Инстаграм<br> fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br>fab fa-twitter - Твитер<br>fab fa-twitter-square - Твитер<br>fab fa-odnoklassniki-square - одноклассники<br> fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br>fab fa-whatsapp-square - WhatsApp<br> fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br>fab fa-discord - Discord<br>fab fa-viber - Viber<br> fab fa-linkedin-in - Linkedin<br> fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br> fab fa-telegram-plane - Telegram<br> fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br>fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br>
+        ',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'tree_socialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта сициальной сети',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
 
+      array(
+        'id'          => 'dell_treee_twocommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 2 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'tree_twosocialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br>fab fa-facebook-messenger - фейсбук-мессенджер, <br>fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br> fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br>fab fa-instagram - Инстаграм<br> fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br>fab fa-twitter - Твитер<br>fab fa-twitter-square - Твитер<br>fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br> fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br> fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br>fab fa-discord - Discord<br>fab fa-viber - Viber<br> fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br> fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br> fab fa-snapchat-ghost  - Snapchat<br>
+        ',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'tree_twosocialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта социальной сети',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
 
+      array(
+        'id'          => 'dell_treee_threecommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 3 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
 
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'tree_threesocialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br> fab fa-facebook-messenger - фейсбук-мессенджер, <br> fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br>fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br> fab fa-instagram - Инстаграм<br>fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br> fab fa-twitter - Твитер<br> fab fa-twitter-square - Твитер<br> fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br>fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br> fab fa-discord - Discord<br> fab fa-viber - Viber<br>fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br> ',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'tree_threesocialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта социальной сети',
+        'condition'   => 'tree_commandblock_on_off:is(on)'
+      ),
 
+// блок для четвертоого учасником команды
+      array(
+        'id'          => 'four_commandblock_on_off',
+        'label'       => 'Четвертый участник команды',
+        'desc'        => 'Настроить блок с информацией о четвертом участнике команды',
+        'std'         => 'off',
+        'type'        => 'on-off',
+      ),
+      array(
+       'id'          => 'four_commandblock_picture',
+       'label'        => 'Фотография участника',
+       'desc'        => 'Загрузите фотогрфию четвертого участника команды, размер 317px X 317px',
+       'type'        => 'upload',
+       'condition'   => 'four_commandblock_on_off:is(on)'
+     ),
+      array(
+        'label'       => 'Имя участника команды',
+        'id'          => 'four_commandblock_name',
+        'type'        => 'text',
+        'desc'        => 'Введите Имя, Фамилию четвертого участника команды',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Должность участника команды',
+        'id'          => 'four_commandblock_proff',
+        'type'        => 'text',
+        'desc'        => 'Введите занимающую должность, профессию четвертого участника команды',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
 
+      array(
+        'id'          => 'dell_four_onecommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 1 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'four_socialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br> fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br> fab fa-facebook-messenger - фейсбук-мессенджер, <br> fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br> fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br> fab fa-instagram - Инстаграм<br> fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br>fab fa-twitter - Твитер<br>fab fa-twitter-square - Твитер<br>fab fa-odnoklassniki-square - одноклассники<br> fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br>fab fa-whatsapp-square - WhatsApp<br> fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br>fab fa-discord - Discord<br>fab fa-viber - Viber<br> fab fa-linkedin-in - Linkedin<br> fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br> fab fa-telegram-plane - Telegram<br> fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br>fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br>
+        ',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'four_socialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта сициальной сети',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
+      array(
+        'id'          => 'dell_four_twocommandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 2 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'four_twosocialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для второй ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br>fab fa-facebook-messenger - фейсбук-мессенджер, <br>fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br> fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br>fab fa-instagram - Инстаграм<br> fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br>fab fa-twitter - Твитер<br>fab fa-twitter-square - Твитер<br>fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br> fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br> fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br>fab fa-discord - Discord<br>fab fa-viber - Viber<br> fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br> fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br> fab fa-snapchat-ghost  - Snapchat<br>
+        ',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'four_twosocialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта социальной сети',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
+      array(
+        'id'          => 'dell_four_commandblock_on_off',
+        'label'       => 'Включить/Отключить отображение 3 соц. аккаунта',
+        'desc'        => 'Вы можете настроить отобрадение иконки и ссылки на любую социальную сеть или отключить отображение иконки',
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите код иконки социальной сети',
+        'id'          => 'four_threesocialblock_icon',
+        'type'        => 'text',
+        'desc'        => 'Вы можете определить иконку для третьей ссылки на социальную сеть:<br>
+        fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br> fab fa-facebook-messenger - фейсбук-мессенджер, <br> fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br>fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br> fab fa-instagram - Инстаграм<br>fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br> fab fa-twitter - Твитер<br> fab fa-twitter-square - Твитер<br> fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br>fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br> fab fa-discord - Discord<br> fab fa-viber - Viber<br>fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br> ',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
+      array(
+        'label'       => 'Введите ссылку на социальную сеть',
+        'id'          => 'four_threesocialblock_link',
+        'type'        => 'text',
+        'desc'        => 'Вы можете указать интернет-адрес вашего аккаунта социальной сети',
+        'condition'   => 'four_commandblock_on_off:is(on)'
+      ),
 
+// блок с ссылкой на какую-то страницу
+      array(
+        'label'       => 'Спец. предложение',
+        'id'          => 'spesial_propose',
+        'type'        => 'tab'
+      ),
+      array(
+        'label'       => 'Название блока', 'theme-text-domain',
+        'id'          => 'spesial_propose_title',
+        'type'        => 'text',
+        'desc'        => 'Введите текст призыва для блока специального предложения для нового клиента!!!'
+      ),
 
-     /* end fields array(  */
-    )
-  );
+      array(
+        'label'       => 'Изменить надпись на кнопке',
+        'id'          => 'spesial_propose_link',
+        'type'        => 'text',
+        'desc'        => 'Изменить текст надписи на кнопке, которая размещена в блоке специальное предложение для нового пациента',
+      ),
+      array(
+        'id'          => 'spesial_propose_link_pageselect',
+        'label'       => 'Выберите страницу',
+        'desc'        => '',
+        'type'        => 'page-select',
+        'desc'        => 'Выберите название страницы, чтобы привязать кнопку к странице на сайте',
+      ),
+      /* end fields array(  */
+      )
+);
 
 
 
@@ -565,60 +1163,60 @@ array(
 
 // внизу только то что для резерва
 
-  $my_meta_box = array(
-    'id'          => 'demo_meta_box',
-    'title'       => __( 'Demo Meta Box', 'theme-text-domain' ),
-    'desc'        => '',
-    'pages'       => array( 'post' ),
-    'context'     => 'normal',
-    'priority'    => 'high',
-    'fields'      => array(
-      array(
-        'label'       => __( 'Conditions', 'theme-text-domain' ),
-        'id'          => 'demo_conditions',
-        'type'        => 'tab'
-      ),
-      array(
-        'label'       => __( 'Show Gallery', 'theme-text-domain' ),
-        'id'          => 'demo_show_gallery',
-        'type'        => 'on-off',
-        'desc'        => sprintf( __( 'Shows the Gallery when set to %s.', 'theme-text-domain' ), '<code>on</code>' ),
-        'std'         => 'off'
-      ),
-      array(
-        'label'       => '',
-        'id'          => 'demo_textblock',
-        'type'        => 'textblock',
-        'desc'        => __( 'Congratulations, you created a gallery!', 'theme-text-domain' ),
-        'operator'    => 'and',
-        'condition'   => 'demo_show_gallery:is(on),demo_gallery:not()'
-      ),
-      array(
-        'label'       => __( 'Gallery', 'theme-text-domain' ),
-        'id'          => 'demo_gallery',
-        'type'        => 'gallery',
-        'desc'        => sprintf( __( 'This is a Gallery option type. It displays when %s.', 'theme-text-domain' ), '<code>demo_show_gallery:is(on)</code>' ),
-        'condition'   => 'demo_show_gallery:is(on)'
-      ),
-      array(
-        'label'       => __( 'More Options', 'theme-text-domain' ),
-        'id'          => 'demo_more_options',
-        'type'        => 'tab'
-      ),
-      array(
-        'label'       => __( 'Text', 'theme-text-domain' ),
-        'id'          => 'demo_text',
-        'type'        => 'text',
-        'desc'        => __( 'This is a demo Text field.', 'theme-text-domain' )
-      ),
-      array(
-        'label'       => __( 'Textarea', 'theme-text-domain' ),
-        'id'          => 'demo_textarea',
-        'type'        => 'textarea',
-        'desc'        => __( 'This is a demo Textarea field.', 'theme-text-domain' )
-      )
+$my_meta_box = array(
+  'id'          => 'demo_meta_box',
+  'title'       => __( 'Demo Meta Box', 'theme-text-domain' ),
+  'desc'        => '',
+  'pages'       => array( 'post' ),
+  'context'     => 'normal',
+  'priority'    => 'high',
+  'fields'      => array(
+    array(
+      'label'       => __( 'Conditions', 'theme-text-domain' ),
+      'id'          => 'demo_conditions',
+      'type'        => 'tab'
+    ),
+    array(
+      'label'       => __( 'Show Gallery', 'theme-text-domain' ),
+      'id'          => 'demo_show_gallery',
+      'type'        => 'on-off',
+      'desc'        => sprintf( __( 'Shows the Gallery when set to %s.', 'theme-text-domain' ), '<code>on</code>' ),
+      'std'         => 'off'
+    ),
+    array(
+      'label'       => '',
+      'id'          => 'demo_textblock',
+      'type'        => 'textblock',
+      'desc'        => __( 'Congratulations, you created a gallery!', 'theme-text-domain' ),
+      'operator'    => 'and',
+      'condition'   => 'demo_show_gallery:is(on),demo_gallery:not()'
+    ),
+    array(
+      'label'       => __( 'Gallery', 'theme-text-domain' ),
+      'id'          => 'demo_gallery',
+      'type'        => 'gallery',
+      'desc'        => sprintf( __( 'This is a Gallery option type. It displays when %s.', 'theme-text-domain' ), '<code>demo_show_gallery:is(on)</code>' ),
+      'condition'   => 'demo_show_gallery:is(on)'
+    ),
+    array(
+      'label'       => __( 'More Options', 'theme-text-domain' ),
+      'id'          => 'demo_more_options',
+      'type'        => 'tab'
+    ),
+    array(
+      'label'       => __( 'Text', 'theme-text-domain' ),
+      'id'          => 'demo_text',
+      'type'        => 'text',
+      'desc'        => __( 'This is a demo Text field.', 'theme-text-domain' )
+    ),
+    array(
+      'label'       => __( 'Textarea', 'theme-text-domain' ),
+      'id'          => 'demo_textarea',
+      'type'        => 'textarea',
+      'desc'        => __( 'This is a demo Textarea field.', 'theme-text-domain' )
     )
-  );
+  )
+);
 
   /**
    * Register our meta boxes using the

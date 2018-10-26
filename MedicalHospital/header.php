@@ -162,7 +162,8 @@ $dellyoutube = 'none';
 } ?>
 
 <?php if(ot_get_option('header_linkedin')){?>
-<li style="display:<?php echo $delllinkedin; ?>"><a href="<?php echo ot_get_option('header_linkedin'); ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+<li style="display:
+ $delllinkedin; ?>"><a href="<?php echo ot_get_option('header_linkedin'); ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 <?php } ?>
 </ul>
 </div>
