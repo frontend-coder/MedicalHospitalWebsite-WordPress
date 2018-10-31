@@ -308,7 +308,8 @@ template {
   content: "\f2ac"; }
 .fa-snapchat-square:before {
   content: "\f2ad"; }
-
+.fa-discord:before {
+  content: "\f392"; }
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -452,6 +453,17 @@ button::-moz-focus-inner {
   font-style: normal;
   font-size: 28px;
   font-family: Arial, Baskerville, monospace; }
+
+
+
+
+
+
+
+
+
+
+
 
 .mfp-close:hover,
 .mfp-close:focus {
@@ -1608,6 +1620,88 @@ text-decoration: underline;
       -ms-flex-align: center;
           align-items: center; }
 
+
+
+.onasinfo_blocking {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-right: -3%;
+  margin-bottom: -3%; }
+
+.onasinfo_blocking_items {
+  width: 31.333%;
+  text-align: center;
+  margin-right: 3%;
+  margin-bottom: 3%; }
+.onasinfo_blocking_items:nth-child(3n+3) {
+margin-right: 0;
+
+}
+.onasinfo_blocking_items img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.obi_descr {
+ margin-top: 20px;
+height: 30px;
+
+}
+.obi_descr {
+display: inline;
+}
+
+.obi_descr li {
+display: inline-block;
+margin-right: 5px;
+}
+.obi_descr li:last-child {
+margin-right: 0;
+}
+
+
+.obi_descr li a {
+font-size: 1.2rem;
+color: #191919;
+-webkit-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+transition: all 0.2s ease;
+}
+.obi_descr li a:hover {
+    color: #FB6C14;
+}
+.obi_descr_title {
+font-size: 1.5rem;
+color: #191919;
+font-family :Montserrat-Bold, sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .wib_one {
  /*  background: url("../images/icons/girl_1.png"); */
 background-repeat: no-repeat;
@@ -1878,6 +1972,7 @@ text-decoration: none;
           box-shadow: 0 0 2px rgba(236, 236, 236, 0.2); }
 
 #breadcrumbs-one {
+margin-bottom: 0;
   background: #fff;
   overflow: hidden;
   width: 100%; }
@@ -1906,6 +2001,7 @@ text-decoration: none;
 #breadcrumbs-one li {
   padding: .2rem 1.5rem .2rem 0;
   float: left;
+  margin-bottom: 0;
   color: #c2c3c1;
   text-transform: uppercase; }
 
@@ -2072,7 +2168,7 @@ background: none; */ }
   line-height: 30px;
   font-size: 18px;
   text-align: center;
-  display: block;
+  display: inline-block;
   margin-right: 3px;
   margin-bottom: 6px;
   background-color: #fff;
@@ -2215,6 +2311,58 @@ background: none; */ }
   padding: 20px;
   border-bottom: 1px solid #ddd; }
 
+
+.entry_footer a {
+    font-size: 1.125rem;
+    display: inline-block;
+    font-family: "OpenSansBold", sans-serif;
+    padding: 18px 25px;
+    background-color: #1a9bdc;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-border-radius: 10rem;
+    border-radius: 10rem;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+     text-align: center;
+  font-size: 0.6875rem;
+  padding: 10px 15px;
+}
+.entry_footer a:hover {
+   background-color: #157bae;
+}
+
+.single_offfer {
+width: 90%;
+margin: 20px auto;
+display: flex;
+}
+.single_offfer_pic  {
+ display: block;
+ width: 20%;
+  /* height: 250px; */
+
+}
+.single_offfer_pic img {
+display: block;
+width: 100%;
+height: auto;
+}
+
+
+.single_offfer_text {
+  padding-left: 20px;
+  width: 80%;
+}
+
+
+.single_offfer a {
+display: block;
+color: #6a6a6a;
+text-decoration: underline;
+}
+
 .entry_footer .header_button,
 .navigation .header_button {
   text-align: center;
@@ -2350,17 +2498,16 @@ background: none; */ }
   color: #13293e; }
 
 .navigation {
-  display: block;
   margin-bottom: 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-
+  justify-content: flex-start;
+   }
+.pagination_center {
+  display: inline-block;
+}
 .alignleft {
   display: inline-block; }
 
@@ -2579,13 +2726,27 @@ label.comment-field {
 .contact_wrapper {
   padding: 0;
   margin: 0; }
-
+.contact_wrapper label {
+ float: left;
+ width: 31%;
+ margin-right: 3%;
+ margin-bottom: 15px;
+}
+.contact_wrapper label:nth-child(3n+3) {
+margin-right: 0;
+}
+.contact_wrapper label:nth-child(4),
+.contact_wrapper label:nth-child(5) {
+width: 100%;
+margin-right: 0;
+}
 .contact_form_input {
   display: block;
-  float: left;
-  width: 31%;
-  margin-right: 3%;
-  margin-bottom: 15px;
+  width: 100%;
+/*   float: left;
+  width: 31%; */
+ /*  margin-right: 3%;
+  margin-bottom: 15px; */
   height: 50px;
   font-size: 1rem;
   line-height: 0.9375;
@@ -2610,9 +2771,10 @@ label.comment-field {
 .contact_form_textarea {
   padding-top: 10px;
   margin: 0 auto;
-  width: 99%;
+  width: 100%;
   font-size: 1rem;
   height: 200px;
+  overflow: hidden;
   resize: none;
   display: block;
   border: 1px solid #ececec;
@@ -2622,7 +2784,12 @@ label.comment-field {
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
-
+.contact_wrapper .checkbox_box_master .checkbox_box .checkbox label {
+    float: right;
+    width: 60%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 .checkbox input[type="checkbox"].css-checkbox {
   position: absolute;
   overflow: hidden;
@@ -2668,7 +2835,14 @@ label.comment-field {
 
 .button-call .header_button {
   border: 0; }
-
+.wpcf7-form  {
+  position: relative;
+}
+div.wpcf7-response-output {
+  position: absolute;
+  top: 113%;
+  width: 100%;
+}
 /* стили формы обратной связи */
 .forms-call {
   width: 100%;

@@ -491,8 +491,7 @@ function custom_meta_boxes() {
         'type'        => 'text',
         'desc'        => 'Введите описание(Description) блока блока Как мы работаем'
       ),
-
-      array(
+       array(
         'label'       => 'Креативность',
         'id'          => 'creativ_block',
         'type'        => 'tab'
@@ -648,6 +647,7 @@ function custom_meta_boxes() {
         'type'        => 'list-item',
         'condition'   => 'main_slider_show:is(on)',
         'settings'    => array(
+
           array(
             'id'          => 'main_slider_list_header',
             'label'       => 'Напишите заголовок',
@@ -664,18 +664,6 @@ function custom_meta_boxes() {
         ),
 
 // здесь конец портфолио
-
-
-
-
-
-
-
-
-
-
-
-
 // блок наша комманда
       array(
         'label'       => 'Наша команда',
@@ -942,8 +930,6 @@ function custom_meta_boxes() {
         'desc'        => 'Введите занимающую должность, профессию третьего участника команды',
         'condition'   => 'tree_commandblock_on_off:is(on)'
       ),
-
-
       array(
         'id'          => 'dell_treee_onecommandblock_on_off',
         'label'       => 'Включить/Отключить отображение 1 соц. аккаунта',
@@ -1153,6 +1139,118 @@ function custom_meta_boxes() {
 
 
 
+  $o_nas_page = array(
+    'id'          => 'onas_pagebox',
+    'title'       => 'Настройки страницы О нас',
+    'desc'        => '',
+    'pages'       => array( 'page' ),
+    'context'     => 'normal',
+    'priority'    => 'high',
+    'fields'      => array(
+      array(
+        'label'       => 'Блок с командой',
+        'id'          => 'onus_spechlink',
+        'type'        => 'tab'
+        ),
+     array(
+        'label'       => 'Название страницы',
+        'id'          => 'onus_name_title',
+        'type'        => 'text',
+        'desc'        => 'Введите название страницы о нас'
+      ),
+   array(
+        'label'       => 'Описание стрaницы ',
+        'id'          => 'onus_name_descrip',
+        'type'        => 'text',
+        'desc'        => 'Введите описание страницы о нас'
+      ),
+
+   array(
+        'id'          => 'onus_slider_list',
+        'label'       => 'Слайдер',
+        'desc'        => '',
+        'std'         => '',
+        'type'        => 'list-item',
+        'settings'    => array(
+
+          array(
+            'id'          => 'onus_slider_list_header',
+            'label'       => 'Напишите заголовок',
+            'desc'        => '',
+            'type'        => 'text',
+            ),
+          array(
+            'id'          => 'onus_slider_list_upload',
+            'label'       => 'Загрузите слайд',
+            'desc'        => '',
+            'type'        => 'upload',
+            ),
+
+          array(
+            'id'          => 'dell_one_social_block_icon_on_off',
+            'label'       => 'Включить/Отключить отображение 1 соц. аккаунта',
+            'desc'        => 'Вы можете включить/отключить отображение на странице сайте первой иконки и ссылки на первую социальнуб сеть',
+            'std'         => 'off',
+            'type'        => 'on-off',
+          ),
+          array(
+            'id'          => 'onus_slider_list_text',
+            'label'       => 'Вставьте код социальной сети',
+            'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br> fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br> fab fa-facebook-messenger - фейсбук-мессенджер, <br> fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br>fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br> fab fa-instagram - Инстаграм<br>fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br> fab fa-twitter - Твитер<br> fab fa-twitter-square - Твитер<br> fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br>fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br> fab fa-discord - Discord<br> fab fa-viber - Viber<br>fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br> ',
+            'type'        => 'text',
+            'condition'   => 'dell_one_social_block_icon_on_off:is(on)'
+          ),
+          array(
+            'id'          => 'onus_slider_list_link',
+            'label'       => 'Вставьте ссылку на социальную сеть',
+            'desc'        => 'Вы можете вставить ссылку/интернет-адрес социвльной сети ',
+            'type'        => 'text',
+            'condition'   => 'dell_one_social_block_icon_on_off:is(on)'
+          ),
+
+          array(
+            'id'          => 'dell_two_social_block_icon_on_off',
+            'label'       => 'Включить/Отключить отображение 2 соц. аккаунта',
+            'desc'        => 'Вы можете включить/отключить отображение на странице сайте второй иконки и ссылки на первую социальнуб сеть',
+            'std'         => 'off',
+            'type'        => 'on-off',
+          ),
+          array(
+            'id'          => 'onus_twoslider_list_text',
+            'label'       => 'Вставьте код социальной сети',
+            'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br> fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br> fab fa-facebook-messenger - фейсбук-мессенджер, <br> fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br>fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br> fab fa-instagram - Инстаграм<br>fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br> fab fa-twitter - Твитер<br> fab fa-twitter-square - Твитер<br> fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br>fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br> fab fa-discord - Discord<br> fab fa-viber - Viber<br>fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br> ',
+            'type'        => 'text',
+            'condition'   => 'dell_two_social_block_icon_on_off:is(on)'
+          ),
+          array(
+            'id'          => 'onus_twoslider_list_link',
+            'label'       => 'Вставьте ссылку на социальную сеть',
+            'desc'        => 'Вы можете вставить ссылку/интернет-адрес социвльной сети ',
+            'type'        => 'text',
+            'condition'   => 'dell_two_social_block_icon_on_off:is(on)'
+          ),
+
+        array(
+            'id'          => 'dell_three_social_block_icon_on_off',
+            'label'       => 'Включить/Отключить отображение 3 соц. аккаунта',
+            'desc'        => 'Вы можете включить/отключить отображение на странице сайте третьей иконки и ссылки на первую социальнуб сеть',
+            'std'         => 'off',
+            'type'        => 'on-off',
+          ),
+          array(
+            'id'          => 'onus_threeslider_list_text',
+            'label'       => 'Вставьте код социальной сети',
+            'desc'        => 'Вы можете определить иконку для первой ссылки на социальную сеть:<br> fab fa-facebook - фейсбук,<br>fab fa-facebook-square - фейсбук, <br> fab fa-facebook-f - фейсбук, <br> fab fa-facebook-messenger - фейсбук-мессенджер, <br> fab fa-google-plus-g - Google +<br> fab fa-google-plus-square - Google +<br> fab fa-google-plus - Google +<br>fab fa-vk - вконтакте<br>fab fa-pinterest - Пинтерест<br>fab fa-pinterest-square - Пинтерест<br>fab fa-pinterest-p - Пинтерест<br> fab fa-instagram - Инстаграм<br>fab fa-youtube-square - YouTube<br> fab fa-youtube - YouTube<br> fab fa-twitter - Твитер<br> fab fa-twitter-square - Твитер<br> fab fa-odnoklassniki-square - одноклассники<br>fab fa-odnoklassniki - одноклассники<br>fab fa-whatsapp - WhatsApp<br> fab fa-whatsapp-square - WhatsApp<br>fab fa-tumblr - Тumblr<br>fab fa-tumblr-square - Тumblr<br>fab fa-skype - Skype<br> fab fa-discord - Discord<br> fab fa-viber - Viber<br>fab fa-linkedin-in - Linkedin<br>fab fa-linkedin  - Linkedin<br> fab fa-telegram - Telegram<br>fab fa-telegram-plane - Telegram<br>fab fa-weixin - WeChat<br>fab fa-snapchat - Snapchat<br> fab fa-snapchat-square  - Snapchat<br>fab fa-snapchat-ghost  - Snapchat<br> ',
+            'type'        => 'text',
+            'condition'   => 'dell_three_social_block_icon_on_off:is(on)'
+          ),
+          array(
+            'id'          => 'onus_threeslider_list_link',
+            'label'       => 'Вставьте ссылку на социальную сеть',
+            'desc'        => 'Вы можете вставить ссылку/интернет-адрес социвльной сети ',
+            'type'        => 'text',
+            'condition'   => 'dell_three_social_block_icon_on_off:is(on)'
+          ),
 
 
 
@@ -1161,13 +1259,193 @@ function custom_meta_boxes() {
 
 
 
-// внизу только то что для резерва
 
-$my_meta_box = array(
-  'id'          => 'demo_meta_box',
-  'title'       => __( 'Demo Meta Box', 'theme-text-domain' ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          )
+        ),
+
+
+
+
+
+            // блок с ссылкой на какую-то страницу
+      array(
+        'label'       => 'Спец. предложение',
+        'id'          => 'onus_spesial_propose',
+        'type'        => 'tab'
+      ),
+      array(
+        'label'       => 'Название блока', 'theme-text-domain',
+        'id'          => 'onus_spesial_propose_title',
+        'type'        => 'text',
+        'desc'        => 'Введите текст призыва для блока специального предложения для нового клиента!!!'
+      ),
+
+      array(
+        'label'       => 'Изменить надпись на кнопке',
+        'id'          => 'onus_spesial_propose_link',
+        'type'        => 'text',
+        'desc'        => 'Изменить текст надписи на кнопке, которая размещена в блоке специальное предложение для нового пациента',
+      ),
+      array(
+        'id'          => 'onus_spesial_propose_link_pageselect',
+        'label'       => 'Выберите страницу',
+        'desc'        => '',
+        'type'        => 'page-select',
+        'desc'        => 'Выберите название страницы, чтобы привязать кнопку к странице на сайте',
+      ),
+
+
+      )
+    );
+
+
+
+  $services_page = array(
+    'id'          => 'services_pagebox',
+    'title'       => 'Настройки страницы Услуги',
+    'desc'        => '',
+    'pages'       => array( 'page' ),
+    'context'     => 'normal',
+    'priority'    => 'high',
+    'fields'      => array(
+      array(
+        'label'       => __( 'Conditions', 'theme-text-domain' ),
+        'id'          => 'demo_conditions',
+        'type'        => 'tab'
+        ),
+      array(
+        'label'       => __( 'Show Gallery', 'theme-text-domain' ),
+        'id'          => 'demo_show_gallery',
+        'type'        => 'on-off',
+        'desc'        => sprintf( __( 'Shows the Gallery when set to %s.', 'theme-text-domain' ), '<code>on</code>' ),
+        'std'         => 'off'
+        ),
+      array(
+        'label'       => '',
+        'id'          => 'demo_textblock',
+        'type'        => 'textblock',
+        'desc'        => __( 'Congratulations, you created a gallery!', 'theme-text-domain' ),
+        'operator'    => 'and',
+        'condition'   => 'demo_show_gallery:is(on),demo_gallery:not()'
+        ),
+      array(
+        'label'       => __( 'Gallery', 'theme-text-domain' ),
+        'id'          => 'demo_gallery',
+        'type'        => 'gallery',
+        'desc'        => sprintf( __( 'This is a Gallery option type. It displays when %s.', 'theme-text-domain' ), '<code>demo_show_gallery:is(on)</code>' ),
+        'condition'   => 'demo_show_gallery:is(on)'
+        ),
+      array(
+        'label'       => __( 'More Options', 'theme-text-domain' ),
+        'id'          => 'demo_more_options',
+        'type'        => 'tab'
+        ),
+      array(
+        'label'       => __( 'Text', 'theme-text-domain' ),
+        'id'          => 'demo_text',
+        'type'        => 'text',
+        'desc'        => __( 'This is a demo Text field.', 'theme-text-domain' )
+        ),
+      array(
+        'label'       => __( 'Textarea', 'theme-text-domain' ),
+        'id'          => 'demo_textarea',
+        'type'        => 'textarea',
+        'desc'        => __( 'This is a demo Textarea field.', 'theme-text-domain' )
+        )
+      )
+    );
+
+
+
+
+
+  $contacts_page = array(
+    'id'          => 'scontacts_pagebox',
+    'title'       => 'Настройки страницы Контакты',
+    'desc'        => '',
+    'pages'       => array( 'page' ),
+    'context'     => 'normal',
+    'priority'    => 'high',
+    'fields'      => array(
+      array(
+        'label'       => __( 'Conditions', 'theme-text-domain' ),
+        'id'          => 'demo_conditions',
+        'type'        => 'tab'
+        ),
+      array(
+        'label'       => __( 'Show Gallery', 'theme-text-domain' ),
+        'id'          => 'demo_show_gallery',
+        'type'        => 'on-off',
+        'desc'        => sprintf( __( 'Shows the Gallery when set to %s.', 'theme-text-domain' ), '<code>on</code>' ),
+        'std'         => 'off'
+        ),
+      array(
+        'label'       => '',
+        'id'          => 'demo_textblock',
+        'type'        => 'textblock',
+        'desc'        => __( 'Congratulations, you created a gallery!', 'theme-text-domain' ),
+        'operator'    => 'and',
+        'condition'   => 'demo_show_gallery:is(on),demo_gallery:not()'
+        ),
+      array(
+        'label'       => __( 'Gallery', 'theme-text-domain' ),
+        'id'          => 'demo_gallery',
+        'type'        => 'gallery',
+        'desc'        => sprintf( __( 'This is a Gallery option type. It displays when %s.', 'theme-text-domain' ), '<code>demo_show_gallery:is(on)</code>' ),
+        'condition'   => 'demo_show_gallery:is(on)'
+        ),
+      array(
+        'label'       => __( 'More Options', 'theme-text-domain' ),
+        'id'          => 'demo_more_options',
+        'type'        => 'tab'
+        ),
+      array(
+        'label'       => __( 'Text', 'theme-text-domain' ),
+        'id'          => 'demo_text',
+        'type'        => 'text',
+        'desc'        => __( 'This is a demo Text field.', 'theme-text-domain' )
+        ),
+      array(
+        'label'       => __( 'Textarea', 'theme-text-domain' ),
+        'id'          => 'demo_textarea',
+        'type'        => 'textarea',
+        'desc'        => __( 'This is a demo Textarea field.', 'theme-text-domain' )
+        )
+      )
+    );
+
+
+
+$portfolio_box = array(
+  'id'          => 'portfolio_meta_box',
+  'title'       => 'Настройки страницы портфолио',
   'desc'        => '',
-  'pages'       => array( 'post' ),
+  'pages'       => array( 'page' ),
   'context'     => 'normal',
   'priority'    => 'high',
   'fields'      => array(
@@ -1218,16 +1496,157 @@ $my_meta_box = array(
   )
 );
 
+// внизу размещены настройки ко всем страницам page.php
+
+
+$page_page = array(
+  'id'          => 'page_page_box',
+  'title'       => 'Настройки обычных страниц',
+  'desc'        => '',
+  'pages'       => array( 'page' ),
+  'context'     => 'normal',
+  'priority'    => 'high',
+  'fields'      => array(
+  array(
+      'label'       => 'Предложение',
+      'id'          => 'usualpage_predlogenie',
+      'type'        => 'tab'
+    ),
+ array(
+        'id'          => 'dell_usualpage',
+        'label'       => 'Включить/Отключить блока спец предложения',
+        'desc'        => 'По умолчанию отображение этого блока на странице отключено. Заполните все поля необходимыми данными и только после этого включите отображение этого блока на сайте',
+        'std'         => 'off',
+        'type'        => 'on-off',
+      ),
+
+      array(
+       'id'          => 'baner_usualpage',
+       'label'        => 'Загрузить банер предложения',
+       'desc'        => 'Загрузить картинку размером 300px x 300px',
+       'type'        => 'upload',
+     ),
+ array(
+      'label'       => 'Текст предложения ',
+      'id'          => 'usualpage_textarea',
+      'type'        => 'textarea',
+      'desc'        => 'Введите текст вашего предложения покупателю',
+    ),
+ array(
+      'label'       => 'Введите анкор ссылки',
+      'id'          => 'usualpage_ankor',
+      'type'        => 'text',
+      'desc'        => 'Вставьте в поле ввода текст, который будет выступать в роли анкора',
+    ),
+   array(
+      'label'       => 'Введите сссылку на покупку курса',
+      'id'          => 'usualpage_link',
+      'type'        => 'text',
+      'desc'        => 'Вставьте в поле ввода ссылку на страницу на которой покупатель сможет заказать и оплатить курс/товар',
+    )
+
+  )
+);
+
+// внизу размещены настройки ко всем страницам single.php
+
+$single_posts = array(
+  'id'          => 'single_meta_box',
+  'title'       => 'Настройка записей на блоге',
+  'desc'        => '',
+  'pages'       => array( 'post' ),
+  'context'     => 'normal',
+  'priority'    => 'high',
+  'fields'      => array(
+    array(
+      'label'       => 'Предложение',
+      'id'          => 'single_predlogenie',
+      'type'        => 'tab'
+    ),
+
+   array(
+        'id'          => 'dell_singlepredlog',
+        'label'       => 'Включить/Отключить блока спец предложения',
+        'desc'        => 'По умолчанию отображение этого блока на странице отключено. Заполните все поля необходимыми данными и только после этого включите отображение этого блока на сайте',
+        'std'         => 'off',
+        'type'        => 'on-off',
+      ),
+
+      array(
+       'id'          => 'baner_singlepredlog',
+       'label'        => 'Загрузить банер предложения',
+       'desc'        => 'Загрузить картинку размером 300px x 300px',
+       'type'        => 'upload',
+     ),
+ array(
+      'label'       => 'Текст предложения ',
+      'id'          => 'single_predlogeniedemo_textarea',
+      'type'        => 'textarea',
+      'desc'        => 'Введите текст вашего предложения покупателю',
+    ),
+ array(
+      'label'       => 'Введите анкор ссылки',
+      'id'          => 'single_predlogeniedemo_ankor',
+      'type'        => 'text',
+      'desc'        => 'Вставьте в поле ввода текст, который будет выступать в роли анкора',
+    ),
+   array(
+      'label'       => 'Введите сссылку на покупку курса',
+      'id'          => 'single_predlogeniedemo_link',
+      'type'        => 'text',
+      'desc'        => 'Вставьте в поле ввода ссылку на страницу на которой покупатель сможет заказать и оплатить курс/товар',
+    )
+  )
+);
+
+
+
+
+
+
+
+
+
+
+
   /**
    * Register our meta boxes using the
    * ot_register_meta_box() function.
    */
-  if ( function_exists( 'ot_register_meta_box' ) )
-    ot_register_meta_box( $my_meta_box );
+ if ( function_exists( 'ot_register_meta_box' ) )
+    ot_register_meta_box( $single_posts );
   $post_id = isset( $_GET['post'] ) ? $_GET['post'] : ( isset( $_POST['post_ID'] ) ? $_POST['post_ID'] : 0 );
   $template_file = get_post_meta($post_id, '_wp_page_template', TRUE);
   if ( $template_file == 'index.php' ){
     ot_register_meta_box( $main_page );
   }
+if ( $template_file == 'o-nas.php' ){
+    ot_register_meta_box( $o_nas_page );
+  }
+if ( $template_file == 'services.php' ){
+    ot_register_meta_box( $services_page );
+  }
+if ( $template_file == 'contacts.php' ){
+    ot_register_meta_box( $contacts_page );
+  }
+if ( $template_file == 'portfilio.php' ){
+    ot_register_meta_box( $portfolio_box );
+  }
+
+if ( $template_file == 'page.php' ){
+    ot_register_meta_box( $page_page );
+  }
+
+// if ( $template_file == 'single.php' ){
+//     ot_register_meta_box( $single_posts );
+//   }
+
+
+
+
+
+
+
+
 
 }
