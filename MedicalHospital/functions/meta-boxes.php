@@ -491,6 +491,25 @@ function custom_meta_boxes() {
         'type'        => 'text',
         'desc'        => 'Введите описание(Description) блока блока Как мы работаем'
       ),
+        array(
+        'id'          => 'how_workcategory_select',
+        'label'       => 'выберите категорию для главной',
+        'desc'        => __( 'The Category Select option type displays a list of category IDs. It allows the user to select only one category ID and will return that value for use in a custom function or loop.', 'theme-text-domain' ),
+       'type'        => 'category-select',
+      ),
+
+      array(
+        'id'          => 'how_workc_numeric_slider',
+        'label'       =>'Настроить количество постов',
+        'desc'        => 'Укажите количество выводимых статей на главноу страницу в разделе блог',
+        'type'        => 'numeric-slider',
+        'min_max_step' => '-1,8,1'
+      ),
+
+
+
+
+
        array(
         'label'       => 'Креативность',
         'id'          => 'creativ_block',
@@ -509,6 +528,15 @@ function custom_meta_boxes() {
         'type'        => 'text',
         'desc'        => 'Введите описание(Description) блока блока Как мы работаем'
       ),
+
+
+
+
+
+
+
+
+
 
       /* первый блок аккардиона креативность */
       array(
@@ -1333,50 +1361,128 @@ function custom_meta_boxes() {
     'context'     => 'normal',
     'priority'    => 'high',
     'fields'      => array(
-      array(
-        'label'       => __( 'Conditions', 'theme-text-domain' ),
-        'id'          => 'demo_conditions',
-        'type'        => 'tab'
-        ),
-      array(
-        'label'       => __( 'Show Gallery', 'theme-text-domain' ),
-        'id'          => 'demo_show_gallery',
-        'type'        => 'on-off',
-        'desc'        => sprintf( __( 'Shows the Gallery when set to %s.', 'theme-text-domain' ), '<code>on</code>' ),
-        'std'         => 'off'
-        ),
-      array(
-        'label'       => '',
-        'id'          => 'demo_textblock',
-        'type'        => 'textblock',
-        'desc'        => __( 'Congratulations, you created a gallery!', 'theme-text-domain' ),
-        'operator'    => 'and',
-        'condition'   => 'demo_show_gallery:is(on),demo_gallery:not()'
-        ),
-      array(
-        'label'       => __( 'Gallery', 'theme-text-domain' ),
-        'id'          => 'demo_gallery',
-        'type'        => 'gallery',
-        'desc'        => sprintf( __( 'This is a Gallery option type. It displays when %s.', 'theme-text-domain' ), '<code>demo_show_gallery:is(on)</code>' ),
-        'condition'   => 'demo_show_gallery:is(on)'
-        ),
-      array(
-        'label'       => __( 'More Options', 'theme-text-domain' ),
-        'id'          => 'demo_more_options',
-        'type'        => 'tab'
-        ),
-      array(
-        'label'       => __( 'Text', 'theme-text-domain' ),
-        'id'          => 'demo_text',
+
+ array(
+      'label'       => 'Главные настройки',
+      'id'          => 'services_page_info',
+      'type'        => 'tab'
+    ),
+    array(
+        'label'       => 'Заголовок страницы',
+        'id'          => 'services_page_title',
         'type'        => 'text',
-        'desc'        => __( 'This is a demo Text field.', 'theme-text-domain' )
+        'desc'        => 'Введите название страницы Услуги',
         ),
+ array(
+        'label'       => 'Описание страницы',
+        'id'          => 'services_page_descript',
+        'type'        => 'text',
+        'desc'        => 'Введите краткое описание страницы Услуги',
+        ),
+
+array(
+      'label'       => 'Перечень услуг',
+      'id'          => 'services_perechen',
+      'type'        => 'tab'
+    ),
+
+
+       array(
+        'id'          => 'servicespage_slider_list',
+        'label'       => 'Перечень услуг',
+        'desc'        => '',
+        'std'         => '',
+        'type'        => 'list-item',
+        'settings'    => array(
+
+          array(
+            'id'          => 'servicespage_list_header',
+            'label'       => 'Напишите заголовок',
+            'desc'        => 'Разместите краткое название услуги',
+            'type'        => 'text',
+            ),
+          array(
+            'id'          => 'servicespage_list_upload',
+            'label'       => 'Загрузите слайд',
+            'desc'        => 'Разместите банер коробки предоставляемой услуги',
+            'type'        => 'upload',
+            ),
+         array(
+            'id'          => 'servicespage_list_descr',
+            'label'       => 'Напишите описание услуги',
+            'desc'        => 'Разместите подробное текстовое описание предоставляемой услуги',
+            'type'        => 'textarea',
+            ),
+
+        array(
+            'id'          => 'servicespage_list_link',
+            'label'       => 'Разместите ссылку',
+            'desc'        => 'Выберите название страницы из выпадающего списка, на которой будет размещена подробная информация об услуге',
+            'type'        => 'page-select',
+            ),
+                array(
+            'id'          => 'servicespage_list_linkankor',
+            'label'       => 'Введите название ссылки',
+            'desc'        => '',
+            'type'        => 'text',
+            ),
+
+          )
+        ),
+
+
+
+
+
+
+
+
+
+// блок с ссылкой на какую-то страницу
       array(
-        'label'       => __( 'Textarea', 'theme-text-domain' ),
-        'id'          => 'demo_textarea',
-        'type'        => 'textarea',
-        'desc'        => __( 'This is a demo Textarea field.', 'theme-text-domain' )
-        )
+        'label'       => 'Спец. предложение',
+        'id'          => 'services_spesial_propose',
+        'type'        => 'tab'
+      ),
+      array(
+        'label'       => 'Название блока',
+        'id'          => 'services_spesial_propose_title',
+        'type'        => 'text',
+        'desc'        => 'Введите текст призыва для блока специального предложения для нового клиента!!!'
+      ),
+
+      array(
+        'label'       => 'Изменить надпись на кнопке',
+        'id'          => 'services_spesial_propose_link',
+        'type'        => 'text',
+        'desc'        => 'Изменить текст надписи на кнопке, которая размещена в блоке специальное предложение для нового пациента',
+      ),
+      array(
+        'id'          => 'services_spesial_propose_link_pageselect',
+        'label'       => 'Выберите страницу',
+        'desc'        => '',
+        'type'        => 'page-select',
+        'desc'        => 'Выберите название страницы, чтобы привязать кнопку к странице на сайте',
+      ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       )
     );
 
@@ -1450,50 +1556,58 @@ $portfolio_box = array(
   'priority'    => 'high',
   'fields'      => array(
     array(
-      'label'       => __( 'Conditions', 'theme-text-domain' ),
-      'id'          => 'demo_conditions',
+      'label'       => 'Главные настройки',
+      'id'          => 'portfolio_page_info',
       'type'        => 'tab'
     ),
     array(
-      'label'       => __( 'Show Gallery', 'theme-text-domain' ),
-      'id'          => 'demo_show_gallery',
-      'type'        => 'on-off',
-      'desc'        => sprintf( __( 'Shows the Gallery when set to %s.', 'theme-text-domain' ), '<code>on</code>' ),
-      'std'         => 'off'
-    ),
-    array(
-      'label'       => '',
-      'id'          => 'demo_textblock',
-      'type'        => 'textblock',
-      'desc'        => __( 'Congratulations, you created a gallery!', 'theme-text-domain' ),
-      'operator'    => 'and',
-      'condition'   => 'demo_show_gallery:is(on),demo_gallery:not()'
-    ),
-    array(
-      'label'       => __( 'Gallery', 'theme-text-domain' ),
-      'id'          => 'demo_gallery',
-      'type'        => 'gallery',
-      'desc'        => sprintf( __( 'This is a Gallery option type. It displays when %s.', 'theme-text-domain' ), '<code>demo_show_gallery:is(on)</code>' ),
-      'condition'   => 'demo_show_gallery:is(on)'
-    ),
-    array(
-      'label'       => __( 'More Options', 'theme-text-domain' ),
-      'id'          => 'demo_more_options',
-      'type'        => 'tab'
-    ),
-    array(
-      'label'       => __( 'Text', 'theme-text-domain' ),
-      'id'          => 'demo_text',
-      'type'        => 'text',
-      'desc'        => __( 'This is a demo Text field.', 'theme-text-domain' )
-    ),
-    array(
-      'label'       => __( 'Textarea', 'theme-text-domain' ),
-      'id'          => 'demo_textarea',
-      'type'        => 'textarea',
-      'desc'        => __( 'This is a demo Textarea field.', 'theme-text-domain' )
-    )
-  )
+        'label'       => 'Заголовок страницы',
+        'id'          => 'portfolio_page_title',
+        'type'        => 'text',
+        'desc'        => 'Введите название страницы Портфоло',
+        ),
+ array(
+        'label'       => 'Описание страницы',
+        'id'          => 'portfolio_page_descript',
+        'type'        => 'text',
+        'desc'        => 'Введите краткое описание страницы Портфоло',
+        ),
+
+// настройка галереи на странице портфолио
+
+ array(
+        'label'       => 'Настройки галереи',
+        'id'          => 'page_main_slider_show',
+        'type'        => 'on-off',
+        'desc'        => 'Показать настройки портфолио',
+        'std'         => 'on'
+        ),
+      array(
+        'id'          => 'page_main_slider_list',
+        'label'       => 'Галерея',
+        'desc'        => '',
+        'std'         => '',
+        'type'        => 'list-item',
+        'condition'   => 'page_main_slider_show:is(on)',
+        'settings'    => array(
+
+          array(
+            'id'          => 'page_main_slider_list_header',
+            'label'       => 'Напишите заголовок',
+            'desc'        => '',
+            'type'        => 'text',
+            ),
+          array(
+            'id'          => 'page_main_slider_list_upload',
+            'label'       => 'Загрузите слайд',
+            'desc'        => '',
+            'type'        => 'upload',
+            ),
+          )
+        )
+
+
+   )
 );
 
 // внизу размещены настройки ко всем страницам page.php
