@@ -2658,9 +2658,38 @@ form#commentform, p.logged-in {
   margin: 30px;
   font-size: 1.20rem; }
 
-p.logged-in a, .bloged-in a {
+
+.comments-title a, p.logged-in a,
+#cancel-comment-reply-link {
+ color: #555;
+ -webkit-transition: all 0.2s ease;
+ -o-transition: all 0.2s ease;
+ transition: all 0.2s ease;
+}
+#cancel-comment-reply-link {
+padding-left: 20px;
+}
+.comments-title a:hover,
+.cancel-comment-reply:hover {
+text-decoration: underline;
+}
+
+
+p.logged-in a,
+.bloged-in a {
   color: #555;
-  text-decoration: underline; }
+  text-decoration: underline;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+
+p.logged-in a:hover,
+.bloged-in a:hover {
+ text-decoration: none;
+}
+
+
 
 .bloged-in {
   font-size: 1.20rem; }

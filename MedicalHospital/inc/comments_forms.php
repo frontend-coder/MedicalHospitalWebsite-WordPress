@@ -26,7 +26,7 @@ function inspiration_comment( $comment, $args, $depth ) {
         <?php endif; ?>
 </div>
         <div class="reply">
-            <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?> / <?php edit_comment_link( __( '(Изменить)', 'medhosp' ), ' ' ); ?>
+            <?php comment_date('l, j : m : Y, G:i:s'); ?> / <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?> / <?php edit_comment_link( __( 'Изменить', 'medhosp' ), ' ' ); ?>
         </div><!-- .reply -->
     </div><!-- #comment-##  -->
 

@@ -45,18 +45,18 @@
 <?php endif; ?>
 <?php if ('open' == $post->comment_status) : ?>
 <div id="respond">
-	<div id="postcomment class="comments-title"><?php comment_form_title( __( 'Оставьте свой комментарий или вопрос', 'inspiration' ), __( 'Оставьте комментарий к %s', 'inspiration' ) ); ?></div>
+	<div id="postcomment" class="comments-title"><?php comment_form_title( __( 'Оставьте свой комментарий или вопрос', 'inspiration' ), __( 'Оставьте комментарий к %s', 'inspiration' ) ); ?></div>
 <div class="cancel-comment-reply">
 	<small><?php cancel_comment_reply_link(); ?></small>
 </div>
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-<p clas="logged-in"><?php _e( 'Вы должны', 'medhosp' ); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>"><?php _e( 'войти', 'medhosp' ); ?>  </a> <?php _e( 'чтобы комментировать статью.', 'medhosp' ); ?>
+<p class="logged-in"><?php _e( 'Вы должны', 'medhosp' ); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>"><?php _e( 'войти', 'medhosp' ); ?>  </a> <?php _e( 'чтобы комментировать статью.', 'medhosp' ); ?>
 </p>
 <?php else : ?>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 <?php if ( $user_ID ) : ?>
-<p clas="logged-in"><?php _e( 'Вы вошли как', 'medhosp' ); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e( 'Выйти из этого аккаунта', 'medhosp' ); ?>"><?php _e( 'Выйти', 'medhosp' ); ?> &raquo;</a></p>
+<p class="logged-in"><?php _e( 'Вы вошли как', 'medhosp' ); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e( 'Выйти из этого аккаунта', 'medhosp' ); ?>"><?php _e( 'Выйти', 'medhosp' ); ?> &raquo;</a></p>
 <?php else : ?>
 
 

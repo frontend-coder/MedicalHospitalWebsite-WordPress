@@ -2,7 +2,7 @@
 <?php dynamic_sidebar('sidebar-left'); ?>
 
 
-
+<!--
 
  <div class="widget">
    <h2 class="footer_title">Быстрые ссылки</h2>
@@ -17,7 +17,7 @@
     </ul>
   </div>
 
-</div>
+</div> -->
 
 <!-- <div class="widget">
  <h2 class="footer_title">Наши услуги</h2>
